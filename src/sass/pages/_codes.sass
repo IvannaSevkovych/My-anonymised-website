@@ -1,0 +1,81 @@
+// #navigation__right, #navigation__left
+// #navigation__left
+// .navigation__text
+//     opacity: 1
+    
+#codes
+    display: flex
+    align-items: center
+
+    &__info
+        opacity: 0
+        padding: 2rem 0
+        margin-top: 15vh
+        // border-right: solid 3px $color_accent
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        width: 30vw
+        height: 65vh
+        color: white
+        &__header
+            font-size: 2rem
+            flex-grow: 1
+            span
+                color: $color_accent
+        &__instruction
+            font-size: 1rem
+            flex-grow: 2
+        &__github
+            svg
+                width: 4rem
+                height: auto
+                flex-grow: 1
+    #container
+        width: 70vw
+        height: 100vh
+        opacity: 0
+
+@media screen and (max-width: 1280px)
+    #codes
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        // justify-content: flex-start
+
+        &__info
+            width: 100vw
+            height: auto
+            padding: 0
+            margin: 8rem 0 0 0
+            justify-content: flex-start
+            &__header
+                font-size: 3rem
+                flex-grow: unset
+            &__instruction
+                font-size: 1.6rem
+                flex-grow: unset
+                margin: 3rem 0
+            &__github
+                display: none
+
+        #container
+            position: fixed
+            bottom: 0
+            width: 100vw
+            height: 60vh   
+
+@media screen and (max-width: 500px)
+    #codes
+
+            &__info
+                margin: 6rem 0 0 0
+                &__header
+                    font-size: 1.6rem
+                &__instruction
+                    font-size: 1rem
+                    margin: 1.6rem 0
+                &__github
+
+            #container

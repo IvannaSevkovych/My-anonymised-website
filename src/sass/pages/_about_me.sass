@@ -1,0 +1,200 @@
+#aboutMe
+    display: flex
+    align-items: center
+    position: relative
+
+
+    &__text
+        position: fixed
+        left: 12.5vw
+        right: 37.5vw
+        top: 10vh
+        display: flex
+        flex-direction: column
+        align-items: start
+        justify-content: center
+        padding: $margin_svg
+        color: white
+        opacity: 0
+        
+
+        &__name
+            margin-bottom: 2rem
+
+        h1
+            font-size: 3.5rem
+            line-height: 4.75rem
+            color: black
+            z-index: 5
+            &#name
+                margin-left: -4rem
+        p
+            text-align: left
+            font-size: 0.75rem
+            line-height: 1rem
+            padding: 1rem 0
+            br
+                display: none
+
+        a
+            text-decoration: none
+            color: black
+            font-family: Syne, sans-serif
+            // transition: color 300ms ease
+            // &:hover
+            //     color: $color_accent
+        
+        
+
+    &__social
+        align-self: center
+        display: flex
+        justify-content: space-between
+        align-items: center
+        opacity: 0
+        border-top: none !important
+
+        a
+            margin: $margin_svg
+            svg
+                padding: 0.3rem
+
+    &__container
+        width: 100vw
+        height: 100vh
+        opacity: 0
+        z-index: 10
+        pointer-events: none
+
+@media screen and (max-width: 1100px)
+    body
+        overflow-x: hidden
+        overflow-y: visible
+
+    #aboutMe
+        &__container
+            position: absolute
+            top: 1rem
+            height: 100vh
+            background-color: transparent
+
+        &__text
+            align-items: center
+            left: 0
+            width: 100vw
+            position: absolute
+            top: 0
+            z-index: 5
+            padding: 0
+            
+            &__name
+                align-self: flex-end
+                margin: 5rem 2.5rem 0 2rem
+            h1
+                font-size: 3rem
+                line-height: 4rem
+                text-align: right
+                &#name
+                    margin-left: 4rem
+
+            a
+                margin: 1rem 
+                svg
+                    padding: 0.3rem
+
+
+            &__narrative
+                padding: 80vh 1rem 0 1rem
+                display: flex
+                flex-direction: column
+                align-items: center
+                width: 90vw
+
+                p
+                    font-size: 1rem
+                    line-height: 1.6rem
+                    font-family: Syne_readable, sans-serif
+                    text-align: justify
+
+                &__first
+                    order: 0
+
+                &__last
+                    order: 2
+
+                &__circle
+                    background-color: $color_accent
+                    border-radius: 50%
+                    width: 20rem
+                    height: 20rem
+                    display: flex
+                    align-items: center
+                    order: 1
+                    margin: 4rem 0
+                    p
+                        font-size: 1.8rem
+                        line-height: 2.6rem
+                        font-family: Syne, sans-serif
+                        text-align: center
+                        display: inline-block
+                        width: 100%
+                        br
+                            display: inline
+                        span
+                            color: black
+                            font-size: 2rem
+
+        &__social
+            justify-content: center
+            width: 85vw
+            margin: 0 1rem 
+            border-top: solid 3px $color_accent !important
+            a
+                margin: $margin_svg 2.5rem
+                svg
+                    padding: 0
+
+@media screen and (max-width: 500px)
+    #aboutMe   
+        &__container
+            
+        &__text
+            
+            &__name
+                align-self: center
+                margin: 4rem 2.5rem 0 2rem
+            h1
+                font-size: 1.8rem
+                line-height: 3rem
+                text-align: center
+                padding: 0 0.5rem
+                &#name
+                    margin-left: 0
+                
+            &__narrative
+                padding: 80vh 1rem 0 1rem
+                width: 100vw
+
+                &__circle
+                    width: 15rem
+                    height: 15rem
+                    margin: 2rem 0
+                    p
+                        font-size: 1.2rem
+                        line-height: 2rem
+
+                        br
+                            display: inline
+                        span
+                            color: black
+                            font-size: 1.5rem 
+        &__social
+            justify-content: space-between
+            width: 90vw
+            padding: 0.5rem 0
+            a
+                margin: 0.5rem
+                svg
+                    height: 36px
+
+

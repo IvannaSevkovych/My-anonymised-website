@@ -1,0 +1,45 @@
+---
+js: portfolio.js
+title: 'Portfolio: Ivanna Sevkovych'
+navigation_right: About me
+navigation_right_goto: about_me.html
+navigation_left: Main
+navigation_left_goto: index.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section id="portfolio">
+
+
+  <div id="portfolio__arrows">
+    <div id="portfolio__arrows__left" class="slick-prev slick-shifted-top">
+      &#8249;
+    </div>
+    <div id="portfolio__arrows__right" class="slick-next slick-shifted-top">
+      &#8250;
+    </div>
+  </div>
+
+  <div id="portfolio__container">
+
+    <div class="portfolio__container__group" id="portfolio__container__vis">
+      <a class="portfolio__container__link" href="portfolio_vis.html">Visualisations</a>
+    </div>
+
+    <div class="portfolio__container__group" id="portfolio__container__tour">
+      <a class="portfolio__container__link" href="https://vtour.sevkovych.com">Virtual tour</a>
+    </div>
+
+    <div class="portfolio__container__group" id="portfolio__container__codes">
+      <a class="portfolio__container__link" href="portfolio_codes.html">Sample codes</a>
+    </div>
+  </div>
+
+  <div id="portfolio__social">
+    {% include "partials/_social_media_icons.html" %}
+  </div>
+</section>
+
+{% endblock %}

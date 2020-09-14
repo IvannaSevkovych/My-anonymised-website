@@ -1,0 +1,11 @@
+<nav>
+    <div id="navigation__left" class="navigation__text">
+        <a href="{{navigation_left_goto}}"> <span>&#8592;</span> {{navigation_left}} </a>
+    </div>
+
+    {% if navigation_right_goto %}
+    <div id="navigation__right" class="navigation__text">
+        <a href="{{navigation_right_goto}}"> {{navigation_right}} <span>&#8594;</span></a>
+    </div>
+    {% endif %}
+</nav>

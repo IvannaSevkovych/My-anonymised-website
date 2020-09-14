@@ -1,0 +1,50 @@
+---
+js: about_me.js
+title: 'About Me: Ivanna Sevkovych'
+navigation_left: Portfolio
+navigation_left_goto: portfolio.html
+navigation_right: Main
+navigation_right_goto: index.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section id="aboutMe">
+  <div id="aboutMe__container"></div>
+
+  <div id="aboutMe__text">
+
+    <div id="aboutMe__text__name">
+
+      <h1 id="name">Ivanna</h1>
+      <h1 id="surname">Sevkovych</h1>
+
+    </div>
+
+    <div id="aboutMe__text__narrative">
+
+      <div id="aboutMe__text__narrative__circle">
+      <p >Meet an <br><span>architect,</span> <br>turned <br><span>3D artist,</span> <br>turned <br><span>coder!</span></p>
+      </div> 
+
+      <p id="aboutMe__text__narrative__first">My name is <span>Ivanna Sevkovych</span>. I am an experienced 3D Artist and
+        designer, who happened to marry a software developer. Who would have thought
+        that writing code could be so contagious? Now I am on a mission to unite the
+        forces of 3D, design and code to create stunning user experience. </p>
+
+      <p id="aboutMe__text__narrative__last">
+        Want to learn
+        more? Feel free to check out my <a href="./downloads/CV_Ivanna_Sevkovych.pdf" download>CV</a>. I am looking
+        forward to get in touch
+        and to help you create something amazing!
+      </p>
+    </div>
+
+    <div id="aboutMe__social">
+      {% include "partials/_social_media_icons.html" %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+#portfolio
+    display: flex
+    align-items: center
+    min-width: 0
+    min-height: 100vh
+
+    &__arrows
+        display: none
+        opacity: 0
+
+    &__container
+        min-width: 0
+        width: 90vw
+        opacity: 0
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+        a
+            text-decoration: none
+            font-size: 1rem
+            color: white
+
+    &__social
+        min-width: 110px
+        max-width: 10vw
+        max-height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        border-left: solid 3px $color_accent
+        opacity: 0
+
+        svg
+            margin: $margin_svg
+
+    .portfolio__container__group
+        min-height: 245px
+        min-width: 245px
+        width: 25%
+        margin: 1rem 
+        text-align: center
+        display: flex !important
+        flex-direction: column-reverse
+
+@media screen and (max-width: 500px)
+    #portfolio
+        flex-direction: column
+        overflow: hidden
+
+        &__container
+            width: 100vw
+            max-height: 70vh
+            justify-content: flex-start
+            flex-direction: column
+            padding-top: 5rem
+            .portfolio__container__link
+                width: 100vw !important
+                margin-top: -4.5rem
+
+
+            .portfolio__container__group
+                width: 100vw
+                min-width: 0
+                margin: 0
+
+
+        &__arrows
+            display: block
+
+        &__social
+            margin: 1.5rem
+            flex-direction: row
+            justify-content: center
+            border-left: none
+            border-top: solid 3px $color_accent
+            width: 90vw
+            max-width: none
+            a
+                display: flex
+                justify-content: center
+                width: 40%
+                height: auto
+
+            svg
+                margin: 1.25rem 
+                width: 50%
+                height: auto

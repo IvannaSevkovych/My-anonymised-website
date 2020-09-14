@@ -1,0 +1,50 @@
+
+.slick
+    // Slider
+    &-slider
+	    min-width: 0
+
+
+    // Bounding container
+    &-list 
+	    overflow: hidden
+
+    // Slides gallery
+    &-track
+	    display: flex
+
+    // Arrows
+    &-arrow
+        position: absolute
+        top: 0
+        font-size: 2.5rem
+        color: $color_accent
+        margin: 1rem
+        z-index: 10
+        &.slick-prev
+            left: 0
+            &.slick-shifted-top
+                top: 35%
+        &.slick-next
+            right: 0
+            &.slick-shifted-top
+                top: 35%
+    &-dots
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        top: 6rem
+        left: 0
+        right: 0
+
+        .slick-active button
+            background-color: $color_accent
+
+        button
+            font-size: 0
+            width: 8px
+            height: 8px
+            background-color: white
+            border-radius: 50%
+            margin: 0 24px

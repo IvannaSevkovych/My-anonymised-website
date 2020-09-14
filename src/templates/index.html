@@ -1,0 +1,20 @@
+---
+js: main.js
+title: 'Welcome! Ivanna Sevkovych'
+navigation_left: Portfolio
+navigation_left_goto: portfolio.html
+navigation_right: About me
+navigation_right_goto: about_me.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_startButton.html" %}
+	<section id="main">
+		<div id="main__container"></div>
+		<h1 id="main__profession">Architect</h1>
+		<h2 id="main__turned">turned</h2>
+	</section>
+
+{% endblock %}

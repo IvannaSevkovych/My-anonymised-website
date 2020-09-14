@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jquery": true
+  },
+  "plugins": [
+    "dollar-sign"
+  ],
+  "extends": ["airbnb-base", "prettier"],
+  "rules": {
+    "dollar-sign/dollar-sign": ["error", "ignoreProperties"],
+    "no-unused-vars": "warn",
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "import/no-cycle": "off"
+  }
+}

@@ -1,0 +1,267 @@
+#portfolio__vis
+    &__container, .navigation__text
+        opacity: 0
+
+    &__container    
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 100
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100vw
+        height: 100vh
+        perspective: 1000px
+        &__gallery
+            $height: 60vh
+            height: $height
+            width: calc(#{$height}*1.7)
+            &__mouse
+                height: 100vh
+                display: flex
+                align-items: center
+                justify-content: center
+                perspective: 3000px
+
+
+
+        &__info
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            height: 150vh
+            width: 16rem
+            background-color: $color_bg 
+            border-left: solid 8px white
+            border-right: solid 8px white
+            text-align: center
+            perspective: 3000px
+            
+            p
+                font-family: Syne_readable, sans-serif
+                font-weight: 100
+                font-size: 0.75rem
+                line-height: 0.75rem
+                display: block
+                width: 100%
+                color: $color_accent 
+                margin-bottom: 0.2rem
+                
+            br
+                display: inline
+            h1
+                font-family: Syne_readable, sans-serif
+                font-size: 0.85rem
+                font-weight: 100
+                line-height: 1.2rem
+                display: block
+                width: 100%
+                color: white
+                margin-bottom: 1.3rem
+            &__technologies
+                display: flex
+                align-items: center
+                justify-content: center
+                p 
+                    font-weight: 100
+                    font-size: 0.65rem
+                    line-height: 0.8rem
+                    color: white
+                &__blocks
+                    svg
+                        height: 1.5rem
+                        margin: 0.6rem 1.5rem 0.1rem 1.5rem
+            &__last
+                p
+                    font-size: 0.65rem
+                    line-height: 1rem
+                    margin-top: 1.3rem
+                    color: white
+    
+    &__backgroundContainer
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 90
+        opacity: 0
+
+
+    &__arrows
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        display: flex
+        align-items: center
+        justify-content: space-between
+        z-index: 105
+        font-size: 4rem
+        color: $color_accent
+        pointer-events: none
+        a
+            pointer-events: initial
+            margin: $margin_page
+            opacity: 0
+        svg
+            display: none
+
+    @media screen and (max-width: 1280px)
+        &__container 
+            flex-direction: column
+            justify-content: flex-start
+            margin-top: 5.5rem
+            &__gallery
+                margin: 0
+                $width: 100vw
+                width: $width
+                height: auto
+                order: 0
+
+                canvas
+                    width: 107vw
+                    max-width: none
+                    max-height: none   
+                   
+                    
+            &__info
+                margin-top: 1rem
+                padding: 1.5rem 0
+                justify-content: flex-start
+                height: auto
+                width: 100vw
+                background-color: $color_bg 
+                border-left: none
+                border-right: none
+                text-align: center
+                transform: none !important
+                order: 2
+
+                p
+                    font-size: 1.2rem
+                    line-height: 1.5rem
+                    width: 100%
+                    margin-bottom: 0.6rem
+
+                h1
+                    font-size: 1rem
+                    line-height: 1.5rem
+                    width: 100%
+                    margin-bottom: 2rem
+                &__technologies
+
+                    p 
+                        font-size: 0.85rem
+                        line-height: 1rem
+                    &__blocks
+                        svg
+                            height: 2.5rem
+                            margin: 0.6rem 2.5rem 0.1rem 2.5rem
+                &__last
+                    p
+                        font-size: 0.85rem
+                        line-height: 1.2rem
+                        margin-top: 2rem
+
+
+        &__arrows
+            position: relative
+            width: 100vw
+            height: auto !important
+            min-height: 2.5rem
+            display: flex
+            align-items: center
+            justify-content: space-between
+            font-size: 4rem
+            margin-top: 0.5rem
+            align-items: center
+            order: 1 
+            a    
+                margin: 0 1rem
+            svg
+                align-self: center
+                display: inline-block
+                height: 3.2rem
+                width: auto
+                padding: 0.1rem
+                path
+                    fill: white
+            .slick-arrow
+                position: static
+            .slick-arrow.slick-next
+                order: 2
+            .slick-dots
+                position: static
+                order: 1
+                font-size: 0.7rem
+
+                button
+                    margin: 0 8px
+                    width: 6px
+                    height: 6px
+
+        &__backgroundContainer
+            display: none
+
+       
+
+    @media screen and (max-width: 500px)
+        &__container 
+            margin-top: 3rem
+
+            &__info
+                padding: 0
+                // min-height: 150vh
+                height: auto
+                width: 16rem
+
+                p
+                    font-size: 0.75rem
+                    line-height: 0.75rem
+                    margin-bottom: 0.2rem
+                    
+                h1
+                    font-size: 0.85rem
+                    font-weight: 100
+                    line-height: 1.2rem
+                    margin-bottom: 1.3rem
+                &__technologies
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    p 
+                        font-weight: 100
+                        font-size: 0.65rem
+                        line-height: 0.8rem
+                        color: white
+                    &__blocks
+                        svg
+                            height: 1.5rem
+                            margin: 0.6rem 1.5rem 0.1rem 1.5rem
+                &__last
+                    p
+                        font-size: 0.65rem
+                        line-height: 1rem
+                        margin-top: 1.5rem
+                        color: white
+
+
+        &__arrows
+            font-size: 2.5rem
+            a    
+                // position: absolute
+                margin: 0 1rem
+                // top: 100vw
+            svg
+                height: 2rem
+                width: auto
+
+
+
+@media screen and (max-width: 1280px)
+    body
+        overflow-y: visible
+        overflow-x: hidden
+    

@@ -1,0 +1,60 @@
+---
+js: portfolio_vis.js
+title: 'My Visualisations: Ivanna Sevkovych'
+navigation_left: Portfolio
+navigation_left_goto: portfolio.html
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<section id="portfolio__vis">
+		<div id="portfolio__vis__backgroundContainer"></div>
+
+		<div id="portfolio__vis__container">
+			<div id="portfolio__vis__arrows">
+				<a id="portfolio__vis__arrows__left" class="slick-prev">
+					&#8249;
+				</a>
+
+				<a id="portfolio__vis__arrows__right" class="slick-next">
+					&#8250;
+				</a>
+			</div>
+			<div id="portfolio__vis__container__info">
+				<p>Project name :</p>
+				<h1 id="name">Baden-Württemberg Haus</h1>
+				<p>Architects :</p>
+				<h1 id="company">Werner Sobek Design GmbH</h1>
+				<p>Location :</p>
+				<h1 id="location">Dubai, UAE</h1>
+				<p>My tasks :</p>
+				<h1>Modelling<br>Rendering<br>Post-Production</h1>
+				<p>Technologies :</p>
+				<div id="portfolio__vis__container__info__technologies">
+					<div id="portfolio__vis__container__info__technologies__blocks">
+						{% include "./partials/_3dsMax.html" %}
+						<p>Autodesk <br>3ds Max</p>
+					</div>
+					<div id="portfolio__vis__container__info__technologies__blocks">
+						{% include "./partials/_corona.html" %}
+						<p>Corona <br>Renderer</p>
+					</div>
+					<div id="portfolio__vis__container__info__technologies__blocks">
+						{% include "./partials/_photoshop.html" %}
+						<p>Adobe <br>Photoshop</p>
+					</div>
+				</div>
+				<div id="portfolio__vis__container__info__last">
+					<p>This project was made as an employee<br>of Werner Sobek Design GmbH</p>
+				</div> 
+			</div>
+			<div id="portfolio__vis__container__gallery__mouse">
+				<div id="portfolio__vis__container__gallery"></div>
+			</div>	
+		</div>
+
+
+	</section>
+
+{% endblock %}

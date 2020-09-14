@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <meta name="author" content="Ivanna Sevkovych" />
+  <meta name="description"
+    content="Meet an architect, turned 3D artist, turned frontend developer!">
+  <meta name="keywords"
+    content="Architect, 3D Artist, Frontend Developer, Coder, JavaScript, Three.js, Pano, VR, CGI" />
+  <meta property="og:locale" content="de-DE" />
+  <meta property="og:site_name" content="{% if title %}{{ title }}{% else %}Template{% endif %}" />
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}Template{% endif %}" />
+  <meta property="og:url" content="https://ivanna.sevkovych.com" />
+  <meta property="og:description"
+    content="Meet an architect, turned 3D artist, turned frontend developer!" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+  <!--
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png"/>
+  -->
+  <link rel="icon" type="image/ico" href="icons/favicon.ico" />
+
+  <link rel="manifest" href="icons/site.webmanifest" />
+
+  <link rel="stylesheet" type="text/css" href="css/app.css" />
+  {# {% include "../partials/_media-tags.html" %} #}
+</head>
+
+<body data-barba="wrapper">
+
+  <!-- BEGIN content -->
+  {% include "partials/_cursor.html" %}
+  {% include "partials/_loader.html" %}
+
+  <div id="barba" data-barba="container" data-barba-namespace="{{js}}">
+    {% include "partials/_navigation.html" %}
+
+    {% block content %}{% endblock %}
+  </div>
+  <!-- END content -->
+
+  <!-- BEGIN scripts -->
+  <script type="text/javascript" src="js/{{js}}"></script>
+  <!-- END scripts -->
+
+</body>
+
+</html>

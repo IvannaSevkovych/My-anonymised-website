@@ -1,0 +1,53 @@
+#navigation__right, #navigation__left
+	position: absolute
+	opacity: 0
+	z-index: 900
+    
+	
+
+#navigation__right
+	bottom: 0
+	right: 0
+
+#navigation__left
+	top: 0
+	left: 0
+
+.navigation__text
+	display: flex
+	position: fixed
+	margin: $margin_page
+	opacity: 0
+	a
+		font-size: 1rem
+		color: white
+		transition: color 0.3s ease-in-out
+		text-decoration: none
+
+		span
+			color: $color_accent
+            font-size: 5em !important
+
+.navigation__filled
+    background-color: $color_bg
+    padding: 0.5rem
+    border: 2px white solid
+
+.navigation__right_mobile
+	top: 98vh
+
+.navigation__right_tablet
+	top: 90vh
+
+@media screen and (max-width: 1280px)
+	.navigation__text
+
+		a
+			font-size: 1.5rem !important
+
+@media screen and (max-width: 500px)
+	.navigation__text
+		margin: 1rem
+		a
+			font-size: 1rem !important
+
